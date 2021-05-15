@@ -1,0 +1,47 @@
+{
+  "timeZone": "America/New_York",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/calendar.addons.execute",
+    "https://www.googleapis.com/auth/classroom.courses.readonly",
+    "https://www.googleapis.com/auth/calendar",
+    "https://www.googleapis.com/auth/script.external_request"
+  ],
+  "dependencies": {
+    "enabledAdvancedServices": [
+      {
+        "userSymbol": "Classroom",
+        "version": "v1",
+        "serviceId": "classroom"
+      },
+      {
+        "userSymbol": "Calendar",
+        "version": "v3",
+        "serviceId": "calendar"
+      }
+    ]
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "addOns": {
+    "common": {
+      "name": "Brebeuf Schedule 5754929",
+      "logoUrl": "https://i.imgur.com/wUXHAbc.png",
+      "homepageTrigger": {
+        "runFunction": "toHomePage",
+        "enabled": true
+      },
+      "universalActions": [{
+          "label": "Help",
+          "openLink": "https://docs.google.com/document/d/1S0nVjqsEmeaqvF2Dt-FY8vY9AqksTR5B1VJ1tHXsk2Y/edit?usp=sharing"
+        }, {
+          "label": "Feedback",
+          "openLink": "https://docs.google.com/forms/d/e/1FAIpQLSfqXhScQWswMH8JJ1mVPmyCqbT6_B8IL_33IkHtcrWYMmgIHQ/viewform?usp=sf_link"
+        }]
+    },
+    "calendar": {
+      "homepageTrigger": {
+        "runFunction": "toHomePage"
+      }
+    }
+  }
+}
